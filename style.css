@@ -15,7 +15,7 @@ body{
     background-color: #F3F5FC;
     border: none;
     resize: none;
-    width: calc(100% - 4rem);
+    width: calc(100% - 4.5rem);
 }
 
 ::placeholder{
@@ -67,4 +67,11 @@ footer{
     text-align: center;
     background-color: #0A3871;
     padding: 1rem;
+}
+
+@media screen and (min-width:550px) {
+    .btn{
+        width: 49.5%;
+
+    }
 }
