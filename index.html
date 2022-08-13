@@ -17,22 +17,47 @@
         <div class="container-izq">
             <h1><img class="logo" src="img/Logo.png" alt=""></h1>
             <textarea autofocus placeholder="Ingrese el texto aquí" class="texto-encriptado" id="" cols="45" rows="10"></textarea>
-            
             <div class="botones">
                 <p class="tooltip">&#149 Solo letras minúsculas y sin acentos.</p>
                 <button class="btn" id="btn-encriptar">Encriptar</button>
                 <button class="btn" id="btn-desencriptar">Desencriptar</button>
             </div>
+
         </div>
 
         <div class="container-der">
             <div class="caja">
-                <img class="muñeco" src="img/Muñeco.png" alt="Personaje Alura">
-                <p class="msj-no-encontrado">Ningún mensaje fue encontrado</p>
-                <p class="instrucciones">Ingresa el texto que desees encriptar o desencriptar</p>
+                <img class="muñeco" id="muñeco" src="img/Muñeco.png" alt="Personaje Alura">
+                <p class="txt-procesado" id="txt-procesado">ASDQWEASDASD</p>
+                <p class="msj-no-encontrado" id="msj-no-encontrado">Ningún mensaje fue encontrado</p>
+                <p class="instrucciones" id="instrucciones">Ingresa el texto que desees encriptar o desencriptar</p>
             </div>
         </div>
     </main>
+
+    <script>
+        var buscarA = "a";
+        var input = document.querySelector("textarea");
+        document.getElementById("muñeco").style.display = "none"; /*DEVOLVER ESTA FUNCIÓN DENTRO DEL METODO VERIFICAR*/
+        document.getElementById("msj-no-encontrado").style.display = "none";
+        document.getElementById("instrucciones").style.display = "none";
+       
+        function encriptar(){
+            var element = document.getElementById("txt-procesado");
+            element.innerHTML = input.value;
+            /*
+            if(ar){
+  
+            } else {
+                alert("no funciona");
+            }
+            */
+        }
+
+        var button = document.querySelector("button");
+        button.onclick = encriptar;
+        
+    </script>
 
     <footer>
         <p class="copyrights">&copy Creado por Arie Camhi.</p>

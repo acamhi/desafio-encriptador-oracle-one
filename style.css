@@ -19,6 +19,10 @@ body{
     height: 510px;
 }
 
+.texto-encriptado:focus{
+    outline: none;
+}
+
 ::placeholder{
     color: #0A3871;
     font-family: 'Inter', sans-serif;
@@ -131,10 +135,6 @@ footer{
         margin-left: 240px;
         width: 60%
         
-    }
-
-    .texto-encriptado:focus{
-        outline: none;
     }
 
     .tooltip{
