@@ -11,11 +11,12 @@ body{
     color: #0A3871;
     font-family: 'Inter', sans-serif;
     font-size: 2rem;
-    margin: 1.5rem 2rem 1.5rem 2rem;
+    margin: 78px 2rem 1.5rem 2rem;
     background-color: #F3F5FC;
     border: none;
     resize: none;
     width: calc(100% - 4.5rem);
+    height: 510px;
 }
 
 ::placeholder{
@@ -36,23 +37,53 @@ body{
 
 .btn{
     background-color: #0A3871;
-    color: #F3F5FC;
+    color: #D8DFE8;
     padding: 1.5rem;
     border-radius: 1.5rem;
     border-width: thin;
+    border-color:#0A3871;
     width: 100%;
     font-size: 16px;
     margin-top: 1rem;
     
 }
 
+#btn-encriptar:hover{
+    background-color: #D8DFE8;
+    color: #0A3871;
+}
+
+#btn-encriptar:active{
+    background-color: #0A3871;
+    color: #D8DFE8
+}
+
+#btn-desencriptar{
+    background-color: #D8DFE8;
+    color:  #0A3871;
+}
+
+#btn-desencriptar:hover{
+    background-color: #0A3871;
+    color: #F3F5FC;
+}
+
+#btn-desencriptar:active{
+    background-color: #D8DFE8;
+    color: #D8DFE8;
+}
+
 .caja{
     text-align: center;
     background-color: white;
-    margin: 2rem 2rem 2rem 2rem;
-    padding: 2rem;
+    margin: 1rem 2rem 4rem 2rem;
+    padding: 2rem 2rem 2rem 2rem;
     border-radius: 1.5rem;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+.muñeco{
+    display: none;
 }
 
 .msj-no-encontrado{
@@ -67,11 +98,89 @@ footer{
     text-align: center;
     background-color: #0A3871;
     padding: 1rem;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+
+
 }
 
+
+
 @media screen and (min-width:550px) {
+    .texto-encriptado{
+        margin-top: calc(240px - 74px);
+    }
+
     .btn{
-        width: 49.5%;
+        width: 49%;
 
     }
+
+}
+
+
+
+@media screen and (min-width:1060px){
+
+
+    .texto-encriptado{
+        margin-top: 94px;
+        margin-left: 240px;
+        width: 60%
+        
+    }
+
+    .texto-encriptado:focus{
+        outline: none;
+    }
+
+    .tooltip{
+        margin-left: 0;
+        font-size: 0.75rem;
+    }
+
+    .botones{
+        margin-left: 240px;
+        margin-right: 0;
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 100px;
+
+    }
+    
+    .btn{
+        /*Podría hacer algo con los botones para que se ajusten a medida que se achica la pantalla*/
+        width: 328px;
+        margin-right: 0;
+
+        
+    }
+
+    .container-izq{
+        float: left;
+        width: 50%;
+    }
+
+    .container-der{
+        float: right;
+    }
+
+    .caja{
+        width: 368px;
+        margin-left: 40px;
+    }
+
+    .muñeco{
+        margin-top: 190px;
+        display: block;
+    }
+
+    .instrucciones{
+        margin-bottom: 190px;
+    }
+    
+    
 }

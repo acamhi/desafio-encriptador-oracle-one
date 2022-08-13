@@ -13,17 +13,24 @@
 </head>
 <body>
     <main class="cuerpo">
-        <h1><img class="logo" src="img/Logo.png" alt=""></h1>
-        <textarea class="texto-encriptado" id="" cols="45" rows="10"></textarea>
-        <p class="tooltip">&#149 Solo letras minúsculas y sin acentos.</p>
-        <div class="botones">
-            <button class="btn" id="btn-encriptar">Encriptar</button>
-            <button class="btn" id="btn-desencriptar">Desencriptar</button>
+
+        <div class="container-izq">
+            <h1><img class="logo" src="img/Logo.png" alt=""></h1>
+            <textarea autofocus placeholder="Ingrese el texto aquí" class="texto-encriptado" id="" cols="45" rows="10"></textarea>
+            
+            <div class="botones">
+                <p class="tooltip">&#149 Solo letras minúsculas y sin acentos.</p>
+                <button class="btn" id="btn-encriptar">Encriptar</button>
+                <button class="btn" id="btn-desencriptar">Desencriptar</button>
+            </div>
         </div>
 
-        <div class="caja">
-            <p class="msj-no-encontrado">Ningún mensaje fue encontrado</p>
-            <p class="instrucciones">Ingresa el texto que desees encriptar o desencriptar</p>
+        <div class="container-der">
+            <div class="caja">
+                <img class="muñeco" src="img/Muñeco.png" alt="Personaje Alura">
+                <p class="msj-no-encontrado">Ningún mensaje fue encontrado</p>
+                <p class="instrucciones">Ingresa el texto que desees encriptar o desencriptar</p>
+            </div>
         </div>
     </main>
 
