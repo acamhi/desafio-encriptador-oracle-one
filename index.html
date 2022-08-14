@@ -28,7 +28,7 @@
         <div class="container-der">
             <div class="caja">
                 <img class="muñeco" id="muñeco" src="img/Muñeco.png" alt="Personaje Alura">
-                <p class="txt-procesado" id="txt-procesado">ASDQWEASDASD</p>
+                <p class="txt-caja" id="txt-caja"></p>
                 <p class="msj-no-encontrado" id="msj-no-encontrado">Ningún mensaje fue encontrado</p>
                 <p class="instrucciones" id="instrucciones">Ingresa el texto que desees encriptar o desencriptar</p>
             </div>
@@ -36,22 +36,30 @@
     </main>
 
     <script>
+        var matrizBusqueda = ["a", "e", "i", "o", "u"];
+        var matrizRemplazo = ["ai", "enter", "imes", "ober", "ufat"];
+
         var buscarA = "a";
-        var input = document.querySelector("textarea");
+        var remplazarA = "ai"
+        var msgTxtArea = document.querySelector("textarea");
         document.getElementById("muñeco").style.display = "none"; /*DEVOLVER ESTA FUNCIÓN DENTRO DEL METODO VERIFICAR*/
         document.getElementById("msj-no-encontrado").style.display = "none";
         document.getElementById("instrucciones").style.display = "none";
        
         function encriptar(){
-            var element = document.getElementById("txt-procesado");
-            element.innerHTML = input.value;
-            /*
-            if(ar){
-  
-            } else {
-                alert("no funciona");
-            }
-            */
+            //Selecciona el texto de la caja
+            var txtCaja = document.getElementById("txt-caja");
+            //Almacena el valor del texto de la textarea
+            var textoModificar = msgTxtArea.value;
+            //Reemplaza todas las coincidencias y almacena la nueva string en la variable nuevoTxt
+            var nuevoTxt = textoModificar
+            .replaceAll("e", "enter")
+            .replaceAll("i", "imes")
+            .replaceAll("a", "ai")
+            .replaceAll("o", "ober")
+            .replaceAll("u", "ufat");
+            //Modifica el html para que sea el texto de la textarea pero con las modificaciones
+            txtCaja.innerHTML = nuevoTxt;
         }
 
         var button = document.querySelector("button");
