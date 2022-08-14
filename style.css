@@ -102,6 +102,21 @@ body{
     color: #495057;
 }
 
+#btn-copiar{
+    background-color: white;
+    color: #0A3871;
+}
+
+#btn-copiar:hover{
+    background-color:#0A3871 ;
+    color: white;
+}
+
+#btn-copiar:active{
+    background-color: white;
+    color: #0A3871;
+}
+
 footer{
     font-size: 0.75rem;
     color: white;
@@ -127,6 +142,10 @@ footer{
     .btn{
         width: 49%;
 
+    }
+
+    #btn-copiar{
+        width: 100%;
     }
 
 }
@@ -175,9 +194,9 @@ footer{
     }
 
     .caja{
+        position: relative;
         width: 368px;
         height: 785px;
-        margin-left: 40px;
     }
 
     .muñeco{
@@ -186,8 +205,15 @@ footer{
     }
 
     .instrucciones{
-        margin-bottom: 190px;
+        margin-bottom: 0px;
     }
-    
+
+    #btn-copiar{
+        position: absolute;
+        bottom: 50px;
+        left: 22px;
+        right: auto;
+        width: 90%;
+    }
     
 }
