@@ -96,6 +96,12 @@ body{
     margin-bottom: 1rem;
 }
 
+.txt-caja{
+    overflow-wrap: break-word;
+    font-size: 1.5rem;
+    color: #495057;
+}
+
 footer{
     font-size: 0.75rem;
     color: white;
@@ -170,6 +176,7 @@ footer{
 
     .caja{
         width: 368px;
+        height: 785px;
         margin-left: 40px;
     }
 
