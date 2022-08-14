@@ -36,9 +36,6 @@
     </main>
 
     <script>
-        var matrizBusqueda = ["a", "e", "i", "o", "u"];
-        var matrizRemplazo = ["ai", "enter", "imes", "ober", "ufat"];
-
         var buscarA = "a";
         var remplazarA = "ai"
         var msgTxtArea = document.querySelector("textarea");
@@ -62,8 +59,28 @@
             txtCaja.innerHTML = nuevoTxt;
         }
 
-        var button = document.querySelector("button");
-        button.onclick = encriptar;
+        function desencriptar(){
+            //Seleccionar texto de la caja
+            var txtCaja = document.getElementById("txt-caja");
+            //Almacena el valor del texto de la textarea
+            var textoModificar = msgTxtArea.value;
+            //Reemplaza todas las coincidencias y almacena la nueva string en la variable nuevoTxt
+            var nuevoTxt = textoModificar
+            .replaceAll("enter", "e")
+            .replaceAll("imes", "i")
+            .replaceAll("ai", "a")
+            .replaceAll("ober", "o")
+            .replaceAll("ufat", "u");
+            //Modifica el html para que sea el texto de la textarea pero con las modificaciones
+            txtCaja.innerHTML = nuevoTxt;            
+
+        }
+
+        var selecBtnEncriptar = document.querySelector("#btn-encriptar");
+        selecBtnEncriptar.onclick = encriptar;
+
+        var selecBtnDesencriptar = document.querySelector("#btn-desencriptar");
+        selecBtnDesencriptar.onclick = desencriptar;
         
     </script>
 
