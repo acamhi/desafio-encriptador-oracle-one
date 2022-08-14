@@ -43,27 +43,31 @@
        
         function encriptar(){
             
-            //Esconde imagen y mensajes predeterminados.
+            
 
-            //Selecciona el texto de la caja
+            //Selecciona el texto de la caja.
             var txtCaja = document.getElementById("txt-caja");
-            //Almacena el valor del texto de la textarea
+            //Almacena el valor del texto de la textarea.
             var textoModificar = msgTxtArea.value;
-            //Reemplaza todas las coincidencias y almacena la nueva string en la variable nuevoTxt
+            //Reemplaza todas las coincidencias y almacena la nueva string en la variable nuevoTxt.
             var nuevoTxt = textoModificar
             .replaceAll("e", "enter")
             .replaceAll("i", "imes")
             .replaceAll("a", "ai")
             .replaceAll("o", "ober")
             .replaceAll("u", "ufat");
-            //Modifica el html para que sea el texto de la textarea pero con las modificaciones
-            
 
+            
+            //Si el texto no está vacío, oculta los elementos de la caja y muestra el texto encriptado.
             if(textoModificar.length !== 0){
+                //Esconde imagen y mensajes predeterminados.
                 document.getElementById("muñeco").style.display = "none";
                 document.getElementById("msj-no-encontrado").style.display = "none";
                 document.getElementById("instrucciones").style.display = "none";
+                //Modifica el html para que sea el texto de la textarea pero con las modificaciones.
                 txtCaja.innerHTML = nuevoTxt;
+
+            //De lo contrario vuelve a mostrar los elementos de la caja.
             } else {
                 txtCaja.innerHTML = "";
                 document.getElementById("muñeco").style.display = "block";
@@ -77,17 +81,28 @@
         function desencriptar(){
             //Seleccionar texto de la caja
             var txtCaja = document.getElementById("txt-caja");
-            //Almacena el valor del texto de la textarea
+            //Almacena el valor del texto de la textarea.
             var textoModificar = msgTxtArea.value;
-            //Reemplaza todas las coincidencias y almacena la nueva string en la variable nuevoTxt
+            //Reemplaza todas las coincidencias y almacena la nueva string en la variable nuevoTxt.
             var nuevoTxt = textoModificar
             .replaceAll("enter", "e")
             .replaceAll("imes", "i")
             .replaceAll("ai", "a")
             .replaceAll("ober", "o")
             .replaceAll("ufat", "u");
-            //Modifica el html para que sea el texto de la textarea pero con las modificaciones
-            txtCaja.innerHTML = nuevoTxt;            
+            //Modifica el html para que sea el texto de la textarea pero con las modificaciones.
+
+            if(textoModificar.length !== 0){
+                document.getElementById("muñeco").style.display = "none";
+                document.getElementById("msj-no-encontrado").style.display = "none";
+                document.getElementById("instrucciones").style.display = "none";
+                txtCaja.innerHTML = nuevoTxt;
+            } else {
+                txtCaja.innerHTML = "";
+                document.getElementById("muñeco").style.display = "block";
+                document.getElementById("msj-no-encontrado").style.display = "block";
+                document.getElementById("instrucciones").style.display = "block";
+            }           
 
         }
 
